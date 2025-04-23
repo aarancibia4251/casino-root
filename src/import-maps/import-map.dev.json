@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@arancibia/root-config": "http://localhost:9000/index.js",
+    "@arancibia/casino-client": "http://localhost:7090/arancibia-casino-client.js"
+  }
+}
