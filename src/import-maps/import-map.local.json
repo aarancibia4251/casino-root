@@ -1,6 +1,8 @@
 {
   "imports": {
     "@arancibia/root-config": "http://localhost:9000/index.js",
-    "@arancibia/casino-client": "http://localhost:7090/arancibia-casino-client.js"
+    "@arancibia/casino-client": "http://localhost:7090/arancibia-casino-client.js",
+    "@arancibia/appsteps": "http://localhost:4200/main.js",
+    "@arancibia/bodega": "http://localhost:8500/arancibia-bodega.js"
   }
 }
