@@ -2,9 +2,9 @@
   "name": "@arancibia/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal --env importMap=local",
-    "build:dev": "webpack --mode=production --env.importMap=dev",
-    "build:cert": "webpack --mode=production --env.importMap=cert",
-    "build:prod": "webpack --mode=production --env.importMap=prod",
+    "build:dev": "webpack --mode=production --env importMap=dev",
+    "build:cert": "webpack --mode=production --env importMap=cert",
+    "build:prod": "webpack --mode=production --env importMap=prod",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
