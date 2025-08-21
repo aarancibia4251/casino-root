@@ -1,4 +1,5 @@
 import { registerApplication, start, LifeCycles } from "single-spa";
+import "./assets/scripts/service-workers/app-init.js";
 (window as any).global = window;
 
 registerApplication({
