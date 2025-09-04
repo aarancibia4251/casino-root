@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@arancibia/root-config": "http://localhost:9000/index.js",
-    "@arancibia/casino-client": "http://localhost:7090/arancibia-casino-client.js"
+    "@arancibia/root-config": "https://bsportfolio.z15.web.core.windows.net/index.js",
+    "@arancibia/casino-client": "https://bsportfolio.z15.web.core.windows.net/casino-project/arancibia-casino-client.js"
   }
 }

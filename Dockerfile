@@ -8,11 +8,9 @@ WORKDIR '/app'
 
 COPY ./package.json ./
 
-RUN npm install && npm cache clean --force
+RUN npm install
 
-COPY ./dist .
-
-RUN npm install -g serve
+COPY . .
 
 # Serve files on port 3000
-CMD ["serve", "-s", ".", "-l", "9000"]
+CMD ["npm", "start"]
