@@ -48,6 +48,10 @@ module.exports = (webpackConfigEnv, argv) => {
             from: "src/assets",
             to: "assets",
           },
+          {
+            from: "src/service-workers",
+            to: "service-workers",
+          },
         ],
       }),
     ],

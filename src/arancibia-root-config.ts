@@ -1,6 +1,6 @@
 import { registerApplication, start, LifeCycles } from "single-spa";
-import "./assets/scripts/service-workers/app-init.js";
 (window as any).global = window;
+// import "./service-workers/app-init.js";
 
 registerApplication({
   name: "@arancibia/casino-client",
@@ -19,6 +19,16 @@ registerApplication({
   app: () => System.import<LifeCycles>("@arancibia/bodega"),
   activeWhen: ["/bodega-project"],
 });
+
+registerApplication({
+  name: "@arancibia/home",
+  app: () => System.import<LifeCycles>("@arancibia/home"),
+  activeWhen: (location) => location.pathname === "/home",
+});
+
+if (location.pathname === "/") {
+  location.replace("/home");
+}
 
 start({
   urlRerouteOnly: true,

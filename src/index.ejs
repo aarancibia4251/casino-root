@@ -4,17 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
-  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+  <title>Portfolio</title>
 
-  <!--c3 CSS -->
-  <link href="assets/plugins/c3-master/c3.min.css" rel="stylesheet">
-  <!--Toaster Popup message CSS -->
-  <link href="assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
-
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/colors/green.css" rel="stylesheet">
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -43,6 +34,7 @@
     {
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "jquery": "/assets/plugins/jquery/jquery.min.js",
         "react": "https://unpkg.com/react@18/umd/react.development.js",
         "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.development.js",
         "moment": "https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js",
@@ -97,10 +89,6 @@
   <script src="assets/js/sidebarmenu.js"></script>
   <!--morris JavaScript -->
   <script src="assets/plugins/chartist-js/dist/chartist.min.js"></script>
-<!--  <script src="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>-->
-  <!--c3 JavaScript -->
-<!--  <script src="assets/plugins/d3/d3.min.js"></script>-->
-<!--  <script src="assets/plugins/c3-master/c3.min.js"></script>-->
   <!--Custom JavaScript -->
   <script src="assets/js/custom.js"></script>
   <!-- ============================================================== -->
@@ -118,7 +106,7 @@
 <div class="projects">
 </div>
 <div class="left-side-toggle waves-effect waves-light projects">
-  <ul class="">
+  <ul >
     <li>
       <i class="ti-settings text-white"></i><a href="/pwa-project">PWA PROJECT</a>
     </li>

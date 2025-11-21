@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/assets/scripts/service-workers/app-sw.js")
+    .register("./service-workers/app-sw.js")
     .then(() => {
       console.log("con service worker");
     })
