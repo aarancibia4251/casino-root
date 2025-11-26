@@ -28,7 +28,7 @@ jobs:
         uses: ayeressian/bunnycdn-storage-deploy@v2.4.0
         with:
           source: "dist"
-          destination: "www"
+          destination: ""
           storageZoneName: arancibia-storage
           storagePassword: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
           accessKey: "${{ secrets.BUNNY_API_ACCESS_KEY }}"
@@ -37,3 +37,4 @@ jobs:
           remove: "false"
           purgePullZone: "true"
           purgePullZoneDelay: "5"
+          maxRetries: "5"
