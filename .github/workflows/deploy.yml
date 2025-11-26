@@ -31,7 +31,7 @@ jobs:
           destination: ""
           storageZoneName: arancibia-storage
           storagePassword: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
-          accessKey: "${{ secrets.BUNNY_API_ACCESS_KEY }}"
+          accessKey: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
           pullZoneId: 4891065
           upload: "true"
           remove: "false"
