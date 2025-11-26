@@ -1,0 +1,28 @@
+name: Upload to Bunny Storage
+env:
+  environment: "dev"
+on:
+  push:
+    branches: [ all-projects ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Build App
+        run: npm run build:$environment
+
+      - name: Upload files to Bunny Storage
+        uses: own3d/bunny-action@main
+        env:
+          BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
+          BUNNY_STORAGE_HOSTNAME: sg.storage.bunnycdn.com
+          BUNNY_STORAGE_USERNAME: arancibia-storage
+          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          BUNNY_PULL_ZONE_ID: 4891065
+        with:
+          args: deploy --dir=dist
