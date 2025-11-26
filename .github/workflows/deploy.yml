@@ -25,12 +25,15 @@ jobs:
         run: npm run build:$environment
 
       - name: Upload files to Bunny Storage
-        uses: own3d/bunny-action@main
-        env:
-          BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
-          BUNNY_STORAGE_HOSTNAME: sg.storage.bunnycdn.com
-          BUNNY_STORAGE_USERNAME: arancibia-storage
-          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
-          BUNNY_PULL_ZONE_ID: 4891065
+        uses: ayeressian/bunnycdn-storage-deploy@v2.4.0
         with:
-          args: deploy --dir=dist
+          source: "dist"
+          destination: "www"
+          storageZoneName: arancibia-storage
+          storagePassword: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
+          accessKey: "${{ secrets.BUNNY_API_ACCESS_KEY }}"
+          pullZoneId: 4891065
+          upload: "true"
+          remove: "false"
+          purgePullZone: "true"
+          purgePullZoneDelay: "5"
