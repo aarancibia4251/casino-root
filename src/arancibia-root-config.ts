@@ -30,6 +30,16 @@ if (location.pathname === "/") {
   location.replace("/home");
 }
 
+const el = document.getElementById('projects');
+
+window.addEventListener("single-spa:routing-event", (evt: CustomEvent) => {
+  if (evt?.detail?.newUrl.includes("/home")) {
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+});
+
 start({
   urlRerouteOnly: true,
 });
