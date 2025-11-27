@@ -1,5 +1,5 @@
 import { registerApplication, start, LifeCycles } from "single-spa";
-(window as any).global = window.globalThis;
+(window as any).global = window;
 // import "./service-workers/app-init.js";
 
 registerApplication({
@@ -39,6 +39,8 @@ window.addEventListener("single-spa:routing-event", (evt: CustomEvent) => {
     el.style.display = "block";
   }
 });
+
+console.log(window.global);
 
 start({
   urlRerouteOnly: true,
