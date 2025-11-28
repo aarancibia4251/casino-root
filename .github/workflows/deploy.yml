@@ -3,7 +3,7 @@ env:
   environment: "dev"
 on:
   push:
-    branches: [ all-projects ]
+    branches: [ develop ]
 
 jobs:
   deploy:
@@ -29,11 +29,11 @@ jobs:
         with:
           source: "dist"
           destination: ""
-          storageZoneName: arancibia-storage
-          storagePassword: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
+          storageZoneName: "${{ secrets.BUNNY_ARANCIBIA_STORAGE_NAME }}"
+          storagePassword: "${{ secrets.BUNNY_ARANCIBIA_STORAGE_PASSWORD }}"
           storageEndpoint: "sg.storage.bunnycdn.com"
           accessKey: "${{ secrets.BUNNY_API_ACCESS_KEY }}"
-          pullZoneId: 4891065
+          pullZoneId: "${{ secrets.BUNNY_ARANCIBIA_PULL_ZONE_ID }}"
           upload: "true"
           remove: "false"
           purgePullZone: "true"
