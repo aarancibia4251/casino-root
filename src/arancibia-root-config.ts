@@ -1,12 +1,5 @@
 import { registerApplication, start, LifeCycles } from "single-spa";
 (window as any).global = window;
-// import "./service-workers/app-init.js";
-
-registerApplication({
-  name: "@arancibia/casino-client",
-  app: () => System.import<LifeCycles>("@arancibia/casino-client"),
-  activeWhen: ["/casino-project"],
-});
 
 registerApplication({
   name: "@arancibia/appsteps",
@@ -20,27 +13,10 @@ registerApplication({
   activeWhen: ["/bodega-project"],
 });
 
-registerApplication({
-  name: "@arancibia/home",
-  app: () => System.import<LifeCycles>("@arancibia/home"),
-  activeWhen: (location) => location.pathname === "/home",
-});
 
 if (location.pathname === "/") {
-  location.replace("/home");
+  location.replace("/bodega-project");
 }
-
-const el = document.getElementById('projects');
-
-window.addEventListener("single-spa:routing-event", (evt: CustomEvent) => {
-  if (evt?.detail?.newUrl.includes("/home")) {
-    el.style.display = "none";
-  } else {
-    el.style.display = "block";
-  }
-});
-
-console.log(window.global);
 
 start({
   urlRerouteOnly: true,

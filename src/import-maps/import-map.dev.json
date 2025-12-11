@@ -1,9 +1,7 @@
 {
   "imports": {
     "@arancibia/root-config": "https://arancibia.b-cdn.net/index.js",
-    "@arancibia/home": "https://arancibia.b-cdn.net/home/arancibia-home.js",
     "@arancibia/bodega": "https://arancibia.b-cdn.net/bodega-project/arancibia-bodega.js",
-    "@arancibia/casino-client": "https://arancibia.b-cdn.net/casino-project/arancibia-casino-client.js",
     "@arancibia/appsteps": "https://arancibia.b-cdn.net/pwa-project/main-es5.js"
   }
 }
