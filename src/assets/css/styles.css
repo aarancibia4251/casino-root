@@ -1,0 +1,15 @@
+#projects {
+    z-index: 1001;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
