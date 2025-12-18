@@ -1,6 +1,6 @@
 #projects {
     z-index: 1001;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: black;
