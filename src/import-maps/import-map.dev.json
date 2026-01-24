@@ -3,6 +3,6 @@
     "@arancibia/root-config": "https://arancibia.b-cdn.net/index.js",
     "@arancibia/bodega": "https://arancibia.b-cdn.net/bodega-project/arancibia-bodega.js",
     "@arancibia/colas": "https://arancibia.b-cdn.net/colas-project/main.js",
-    "@arancibia/appsteps": "https://arancibia.b-cdn.net/pwa-project/main-es5.js"
+    "@arancibia/casino": "https://arancibia.b-cdn.net/casino-project/arancibia-casino-client.js"
   }
 }

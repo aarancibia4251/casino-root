@@ -3,12 +3,6 @@ import { registerApplication, start, LifeCycles } from "single-spa";
 import "./assets/css/styles.css";
 
 registerApplication({
-  name: "@arancibia/appsteps",
-  app: () => System.import<LifeCycles>("@arancibia/appsteps"),
-  activeWhen: ["/pwa-project"],
-});
-
-registerApplication({
   name: "@arancibia/bodega",
   app: () => System.import<LifeCycles>("@arancibia/bodega"),
   activeWhen: ["/bodega-project"],
@@ -20,6 +14,11 @@ registerApplication({
   activeWhen: ["/colas-project"],
 });
 
+registerApplication({
+  name: "@arancibia/casino",
+  app: () => System.import<LifeCycles>("@arancibia/casino"),
+  activeWhen: ["/casino-project"],
+});
 
 if (location.pathname === "/") {
   location.replace("/bodega-project");
