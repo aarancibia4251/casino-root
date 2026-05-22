@@ -2,10 +2,10 @@
     z-index: 1001;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     background-color: black;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
 
     ul {
         list-style-type: none;
