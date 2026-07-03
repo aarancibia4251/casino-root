@@ -1,6 +1,6 @@
 {
   "name": "@arancibia/root-config",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal --env importMap=local",
     "build:dev": "webpack --mode=production --env importMap=dev",
